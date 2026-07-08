@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stratkit"
+version = "1.0.0"
+description = "An open-source AI copilot for strategy consultants: MECE issue trees, market sizing, synthesis."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ayoub Ezzati", email = "ezzati.ay@gmail.com" }]
+keywords = ["strategy", "consulting", "ai", "llm", "claude", "finance", "mece", "valuation"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Financial and Insurance Industry",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business :: Financial",
+]
+dependencies = [
+  "streamlit>=1.40",
+  "anthropic>=0.40",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+openai = ["openai>=1.50"]
+
+[project.urls]
+Homepage = "https://ezzat-ai.github.io/stratkit"
+Repository = "https://github.com/ezzat-ai/stratkit"
+
+[tool.setuptools]
+packages = ["stratkit"]
